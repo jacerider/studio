@@ -5,8 +5,6 @@
   * [Workflow](#workflow)
   * [Command Reference](#command-reference)
 * [License](#license)
-* [Contributing](#contributing)
-* [For enterprise](#franzlstudio-for-enterprise)
 
 Develop your Composer libraries with style.
 
@@ -30,12 +28,12 @@ This list will only get longer in the future.
 
 Studio can be installed globally or per project, with Composer:
 
-Globally (recommended): `composer global require franzl/studio`
+Globally (recommended): `composer global require jacerider/studio`
 (use as `studio`)
 
 > Make sure that the ~/.composer/vendor/bin directory is added to your PATH, so that the `studio` executable can be located by your system.
 
-Per project: `composer require --dev franzl/studio`
+Per project: `composer require --dev jacerider/studio`
 (use as `vendor/bin/studio`)
 
 ## Usage
@@ -66,7 +64,7 @@ Next, if you haven't already done so, make sure you actually require the package
     "require": {
         "my/world-domination": "dev-master"
     }
-    
+
 And finally, tell Studio to set up the symlinks:
 
     $ composer update my/world-domination
@@ -148,7 +146,7 @@ This will make sure all packages in the `baz` directory (paths with wildcards ar
 #### unload: Stop managing a local path
 
     $ studio unload foo
- 
+
 This will remove the path `foo` from the studio.json configuration file.
 This means any packages in that path will not be available to Composer anymore (unless they are still hosted on Packagist).
 
@@ -170,14 +168,3 @@ Don't worry - you'll be asked for confirmation first.
 
 This code is published under the [MIT License](http://opensource.org/licenses/MIT).
 This means you can do almost anything with it, as long as the copyright notice and the accompanying license file is left intact.
-
-## Contributing
-
-Feel free to send pull requests or create issues if you come across problems or have great ideas.
-Any input is appreciated!
-
-## franzl/studio for enterprise
-
-Available as part of the Tidelift Subscription
-
-The maintainers of franzl/studio and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/packagist-franzl-studio?utm_source=packagist-franzl-studio&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
